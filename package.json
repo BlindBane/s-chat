@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Aidan Bane <aidanfbane@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack-dev-server --open"
+  },
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
