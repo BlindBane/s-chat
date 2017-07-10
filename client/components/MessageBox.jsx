@@ -1,5 +1,6 @@
 import React from 'react';
 import Message from './Message';
+import MessageInput from './MessageInput';
 
 function MessageBox(props) {
   const messages = props.messages.map(msg => (
@@ -13,6 +14,7 @@ function MessageBox(props) {
   return (
     <div>
       {messages}
+      <MessageInput handleNewMsg={props.handleNewMsg} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MessageBox from './components/MessageBox';
-import MessageInput from './components/MessageInput';
+
 
 class App extends Component {
   constructor(props) {
@@ -32,9 +32,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <MessageBox messages={this.state.messages} />
+        <MessageBox messages={this.state.messages} handleNewMsg={this.handleNewMsg} />
         <br />
-        <MessageInput handleNewMsg={this.handleNewMsg} />
+        
       </div>
     );
   }

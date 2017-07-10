@@ -5,7 +5,7 @@ function Message(props) {
     <div>
       <span>[{props.channel}] </span>
       <span>{props.username} says: </span>
-      <span>{props.messageText}</span>
+      <span>{props.messageText} </span>
     </div>
   );
 }

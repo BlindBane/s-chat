@@ -51,7 +51,7 @@ class MessageInput extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          <span>[{this.state.channel}] - </span>
+          <span>[Tell {this.state.channel}: ] - </span>
           <input type="text" value={this.state.messageText} onChange={this.handleChange} />
         </label>
         <input type="submit" value="Submit" />
