@@ -4,19 +4,14 @@ import messageData from './../../../data'
 import MessageSearchBar from './MessageSearchBar'
 
 class Messenger extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      searchTerm: '',
-      messages: messageData.messages
-    }
-    this.handleNewMsg = this.handleNewMsg.bind(this)
-    this.handleSearchTermChange = this.handleSearchTermChange.bind(this)
+  state = {
+    searchTerm: '',
+    messages: messageData.messages
   }
-  handleSearchTermChange (e) {
+  handleSearchTermChange = (e) => {
     this.setState({ searchTerm: e.target.value })
   }
-  handleNewMsg (newMsg) {
+  handleNewMsg = (newMsg) => {
     const newMsgs = [...this.state.messages.slice(0), newMsg]
     this.setState({
       messages: newMsgs
@@ -29,7 +24,10 @@ class Messenger extends Component {
           handleSearchTermChange={this.handleSearchTermChange}
           searchTerm={this.state.searchTerm}
         />
-        <MessageBox messages={this.state.messages} handleNewMsg={this.handleNewMsg} />
+        <MessageBox
+          messages={this.state.messages}
+          handleNewMsg={this.handleNewMsg}
+        />
       </div>
     )
   }

@@ -1,16 +1,11 @@
 import React, { Component } from 'react'
 
 class MessageInput extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      messageText: '',
-      channel: 'general'
-    }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+  state = {
+    messageText: '',
+    channel: 'general'
   }
-  handleChange (e) {
+  handleChange = (e) => {
     e.preventDefault()
     const messageText = e.target.value
     const lastCharIndex = messageText.length - 1
@@ -25,7 +20,7 @@ class MessageInput extends Component {
       })
     }
   }
-  handleSubmit (e) {
+  handleSubmit = (e) => {
     e.preventDefault()
     const messageText = this.state.messageText
     const lastCharIndex = messageText.length
@@ -52,7 +47,11 @@ class MessageInput extends Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           <span>[Tell {this.state.channel}: ] - </span>
-          <input type='text' value={this.state.messageText} onChange={this.handleChange} />
+          <input
+            type='text'
+            value={this.state.messageText}
+            onChange={this.handleChange}
+          />
         </label>
         <input type='submit' value='Submit' />
       </form>
