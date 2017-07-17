@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageBox renders correctly 1`] = `
+<div>
+  <Message
+    channel="sanFrancisco"
+    messageText="Hi, I am bill."
+    username="Bill"
+  />
+  <Message
+    channel="general"
+    messageText="Hi, I am Bob."
+    username="Bob"
+  />
+  <Message
+    channel="ASU"
+    messageText="Hi, I am Bert."
+    username="Bert"
+  />
+  <MessageInput />
+</div>
+`;

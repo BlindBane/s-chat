@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing renders correctly 1`] = `
+<div>
+  <h1>
+    Welcome
+  </h1>
+  <Link
+    replace={false}
+    to="/messenger"
+  >
+     Start Messaging Now!
+  </Link>
+</div>
+`;

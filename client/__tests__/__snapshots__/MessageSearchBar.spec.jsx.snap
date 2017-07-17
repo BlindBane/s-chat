@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageSearchBar renders correctly 1`] = `
+<div>
+  <input
+    placeholder="Seach your messages..."
+    type="text"
+  />
+</div>
+`;

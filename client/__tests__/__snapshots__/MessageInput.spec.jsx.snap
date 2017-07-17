@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageInput renders correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <label>
+    <span>
+      [Tell 
+      general
+      : ] - 
+    </span>
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </label>
+  <input
+    type="submit"
+    value="Submit"
+  />
+</form>
+`;
