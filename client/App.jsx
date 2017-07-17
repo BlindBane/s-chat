@@ -1,11 +1,16 @@
 import React from 'react'
-import { BrowserRouter, Router } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Messenger from './components/messenger/Messenger'
-
+import Landing from './components/Landing'
 const App = () => (
-  <div>
-    <Messenger />
-  </div>
+  <BrowserRouter>
+    <div className='app'>
+      <Switch>
+        <Route exact path='/' component={Landing} />
+        <Route path='/messenger' component={Messenger} />
+      </Switch>
+    </div>
+  </BrowserRouter>
 )
 
 export default App
