@@ -20,5 +20,10 @@
     "babel-preset-react": "^6.24.1",
     "standard": "^10.0.2",
     "webpack-dev-server": "^2.5.1"
+  },
+  "standard": {
+    "ignore": [
+      "node_modules/**"
+    ]
   }
 }
