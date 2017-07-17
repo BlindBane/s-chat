@@ -3,22 +3,22 @@ import Message from './Message'
 import MessageInput from './MessageInput'
 
 function MessageBox (props) {
+  const messages = props.messages.filter(
+      (msg) =>
+        `${msg.username} ${msg.channel} ${msg.messageText}`.toUpperCase()
+        .indexOf(props.searchTerm.toUpperCase()) >= 0
+    )
+    .map(msg => (
+      <Message
+        key={msg.userId}
+        username={msg.username}
+        messageText={msg.messageText}
+        channel={msg.channel}
+      />
+    ))
   return (
     <div>
-      {props.messages
-        .filter(
-          (msg) =>
-            `${msg.username} ${msg.messageText}`.toUpperCase()
-            .indexOf(props.searchTerm.toUpperCase()) >= 0
-        )
-        .map(msg => (
-          <Message
-            key={msg.userId}
-            username={msg.username}
-            messageText={msg.messageText}
-            channel={msg.channel}
-          />
-        ))}
+      {messages}
       <MessageInput handleNewMsg={props.handleNewMsg} />
     </div>
   )
