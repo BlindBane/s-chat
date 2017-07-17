@@ -27,6 +27,7 @@ class Messenger extends Component {
         <MessageBox
           messages={this.state.messages}
           handleNewMsg={this.handleNewMsg}
+          searchTerm={this.state.searchTerm}
         />
       </div>
     )
