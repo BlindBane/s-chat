@@ -13,8 +13,8 @@ class Messenger extends Component {
     this.handleNewMsg = this.handleNewMsg.bind(this)
     this.handleSearchTermChange = this.handleSearchTermChange.bind(this)
   }
-  handleSearchTermChange () {
-    this.setState({ searchTerm: event.target.value })
+  handleSearchTermChange (e) {
+    this.setState({ searchTerm: e.target.value })
   }
   handleNewMsg (newMsg) {
     const newMsgs = [...this.state.messages.slice(0), newMsg]
