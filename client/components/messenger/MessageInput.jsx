@@ -5,6 +5,9 @@ class MessageInput extends Component {
     messageText: '',
     channel: 'general'
   }
+  componentDidMount = () => {
+    this.textInput.focus()
+  }
   handleChange = (e) => {
     e.preventDefault()
     const messageText = e.target.value
@@ -48,6 +51,7 @@ class MessageInput extends Component {
         <label>
           <span>[Tell {this.state.channel}: ] - </span>
           <input
+            ref={(input) => { this.textInput = input }}
             type='text'
             value={this.state.messageText}
             onChange={this.handleChange}
