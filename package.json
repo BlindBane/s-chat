@@ -5,7 +5,15 @@
   "author": "Aidan Bane <aidanfbane@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack-dev-server --open"
+    "dev": "webpack-dev-server --open",
+    "test": "jest",
+    "test:update": "jest -u"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "snapshotSerializers": [
+      "jest-serializer-enzyme"
+    ]
   },
   "dependencies": {
     "react": "^15.6.1",
@@ -18,8 +26,14 @@
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^2.9.1",
+    "jest": "^20.0.4",
+    "jest-enzyme": "^3.5.3",
+    "jest-serializer-enzyme": "^1.0.0",
+    "react-test-renderer": "^15.6.1",
     "standard": "^10.0.2",
     "webpack-dev-server": "^2.5.1"
   },
@@ -27,6 +41,10 @@
     "parser": "babel-eslint",
     "ignore": [
       "node_modules/**"
+    ],
+    "globals": [
+      "test",
+      "expect"
     ]
   }
 }
