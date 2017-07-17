@@ -1,9 +1,11 @@
 import React from 'react'
+import Header from './../Header'
 
 const MessageDetails = (props) => {
   const { channel, username, messageText, msgId } = props.message
   return (
     <div>
+      <Header />
       <p>CHANNEL {channel} </p>
       <p>USER: {username} </p>
       <p>TEXT: {messageText} </p>

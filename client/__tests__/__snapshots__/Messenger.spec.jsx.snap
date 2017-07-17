@@ -2,6 +2,7 @@
 
 exports[`Messenger renders correctly 1`] = `
 <div>
+  <Header />
   <MessageSearchBar
     handleSearchTermChange={[Function]}
     searchTerm=""

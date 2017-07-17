@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import MessageBox from './MessageBox'
 import MessageSearchBar from './MessageSearchBar'
+import Header from './../Header'
 
 class Messenger extends Component {
   state = {
@@ -19,6 +20,7 @@ class Messenger extends Component {
   render () {
     return (
       <div>
+        <Header />
         <MessageSearchBar
           handleSearchTermChange={this.handleSearchTermChange}
           searchTerm={this.state.searchTerm}

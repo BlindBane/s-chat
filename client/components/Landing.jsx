@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Header from './Header'
 
 const Landing = () => {
   return (
     <div>
-      <h1>Welcome</h1>
+      <Header />
       <Link to='/messenger'> Start Messaging Now!</Link>
     </div>
   )

@@ -2,6 +2,7 @@
 
 exports[`MessageDetails renders correctly 1`] = `
 <div>
+  <Header />
   <p>
     CHANNEL 
     sanFrancisco
