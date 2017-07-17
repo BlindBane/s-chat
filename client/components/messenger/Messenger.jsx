@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import MessageBox from './MessageBox'
 import messageData from './../../../data'
+import MessageSearchBar from './MessageSearchBar'
 
 class Messenger extends Component {
   constructor (props) {
@@ -19,6 +20,7 @@ class Messenger extends Component {
   render () {
     return (
       <div>
+        <MessageSearchBar />
         <MessageBox messages={this.state.messages} handleNewMsg={this.handleNewMsg} />
       </div>
     )
