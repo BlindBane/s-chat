@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageDetails renders correctly 1`] = `
+<div>
+  <p>
+    CHANNEL 
+    sanFrancisco
+     
+  </p>
+  <p>
+    USER: 
+    Bill
+     
+  </p>
+  <p>
+    TEXT: 
+    Hi, I am bill.
+     
+  </p>
+  <p>
+    ID: 
+    1
+     
+  </p>
+</div>
+`;
