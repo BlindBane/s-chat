@@ -1,9 +1,14 @@
 import React from 'react'
 
-const MessageSearchBar = () => {
+const MessageSearchBar = (props) => {
   return (
     <div>
-      <input type='text' placeholder='Seach your messages...' />
+      <input
+        onChange={props.handleSearchTermChange}
+        value={props.searchTerm}
+        type='text'
+        placeholder='Seach your messages...'
+      />
     </div>
   )
 }

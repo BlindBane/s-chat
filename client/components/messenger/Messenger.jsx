@@ -7,9 +7,14 @@ class Messenger extends Component {
   constructor (props) {
     super(props)
     this.state = {
+      searchTerm: '',
       messages: messageData.messages
     }
     this.handleNewMsg = this.handleNewMsg.bind(this)
+    this.handleSearchTermChange = this.handleSearchTermChange.bind(this)
+  }
+  handleSearchTermChange () {
+    this.setState({ searchTerm: event.target.value })
   }
   handleNewMsg (newMsg) {
     const newMsgs = [...this.state.messages.slice(0), newMsg]
@@ -20,7 +25,10 @@ class Messenger extends Component {
   render () {
     return (
       <div>
-        <MessageSearchBar />
+        <MessageSearchBar
+          handleSearchTermChange={this.handleSearchTermChange}
+          searchTerm={this.state.searchTerm}
+        />
         <MessageBox messages={this.state.messages} handleNewMsg={this.handleNewMsg} />
       </div>
     )
