@@ -12,6 +12,7 @@ module.exports = {
   },
   devServer: {
     publicPath: '/dist/',
+    historyApiFallback: true,
     contentBase: [path.join(__dirname, 'public'), path.join(__dirname, 'dist')]
   },
   module: {
