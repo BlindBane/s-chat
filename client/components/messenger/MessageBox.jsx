@@ -11,6 +11,7 @@ function MessageBox (props) {
       channel={msg.channel}
     />
   ))
+
   return (
     <div>
       {messages}
