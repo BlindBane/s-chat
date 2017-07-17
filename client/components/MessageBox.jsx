@@ -1,8 +1,8 @@
-import React from 'react';
-import Message from './Message';
-import MessageInput from './MessageInput';
+import React from 'react'
+import Message from './Message'
+import MessageInput from './MessageInput'
 
-function MessageBox(props) {
+function MessageBox (props) {
   const messages = props.messages.map(msg => (
     <Message
       key={msg.userId}
@@ -10,13 +10,13 @@ function MessageBox(props) {
       messageText={msg.messageText}
       channel={msg.channel}
     />
-  ));
+  ))
   return (
     <div>
       {messages}
       <MessageInput handleNewMsg={props.handleNewMsg} />
     </div>
-  );
+  )
 }
 
-export default MessageBox;
+export default MessageBox
