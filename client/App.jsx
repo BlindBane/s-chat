@@ -1,24 +1,12 @@
 import React, { Component } from 'react'
 import MessageBox from './components/MessageBox'
+import messageData from './../data'
 
 class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      messages: [
-        {
-          userId: '1',
-          username: 'Bill',
-          messageText: 'Hi, I am bill.',
-          channel: 'sanFrancisco'
-        },
-        {
-          userId: '2',
-          username: 'Chill Bill',
-          messageText: 'Hi, I am Chill.',
-          channel: 'sanFrancisco'
-        }
-      ]
+      messages: messageData.messages
     }
     this.handleNewMsg = this.handleNewMsg.bind(this)
   }
@@ -32,8 +20,6 @@ class App extends Component {
     return (
       <div>
         <MessageBox messages={this.state.messages} handleNewMsg={this.handleNewMsg} />
-        <br />
-
       </div>
     )
   }
