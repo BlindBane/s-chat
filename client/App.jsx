@@ -1,28 +1,11 @@
-import React, { Component } from 'react'
-import MessageBox from './components/MessageBox'
-import messageData from './../data'
+import React from 'react'
+import { BrowserRouter, Router } from 'react-router-dom'
+import Messenger from './components/messenger/Messenger'
 
-class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      messages: messageData.messages
-    }
-    this.handleNewMsg = this.handleNewMsg.bind(this)
-  }
-  handleNewMsg (newMsg) {
-    const newMsgs = [...this.state.messages.slice(0), newMsg]
-    this.setState({
-      messages: newMsgs
-    })
-  }
-  render () {
-    return (
-      <div>
-        <MessageBox messages={this.state.messages} handleNewMsg={this.handleNewMsg} />
-      </div>
-    )
-  }
-}
+const App = () => (
+  <div>
+    <Messenger />
+  </div>
+)
 
 export default App
