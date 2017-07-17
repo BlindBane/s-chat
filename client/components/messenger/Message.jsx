@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Message (props) {
   return (
     <div>
-      <span>[{props.channel}] </span>
-      <span>{props.username} says: </span>
-      <span>{props.messageText} </span>
+      <Link to={`/message/${props.msgId}`}>
+        <span>[{props.channel}] </span>
+        <span>{props.username} says: </span>
+        <span>{props.messageText} </span>
+      </Link>
     </div>
   )
 }

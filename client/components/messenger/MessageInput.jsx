@@ -31,7 +31,7 @@ class MessageInput extends Component {
       })
     } else {
       const newMsg = {
-        userId: Math.random(),
+        msgId: (Math.floor(Math.random() * (9999999999 - 3)) + 3).toString(),
         username: 'Bill',
         messageText: this.state.messageText,
         channel: this.state.channel

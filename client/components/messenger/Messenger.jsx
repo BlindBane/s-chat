@@ -5,19 +5,12 @@ import Header from './../Header'
 
 class Messenger extends Component {
   state = {
-    searchTerm: '',
-    messages: this.props.messages
+    searchTerm: ''
   }
   handleSearchTermChange = (e) => {
     this.setState({ searchTerm: e.target.value })
   }
-  handleNewMsg = (newMsg) => {
-    const newMsgs = [...this.state.messages.slice(0), newMsg]
-    this.setState({
-      messages: newMsgs
-    })
-  }
-  render () {
+  render (props) {
     return (
       <div>
         <Header />
@@ -26,8 +19,8 @@ class Messenger extends Component {
           searchTerm={this.state.searchTerm}
         />
         <MessageBox
-          messages={this.state.messages}
-          handleNewMsg={this.handleNewMsg}
+          messages={this.props.messages}
+          handleNewMsg={this.props.handleNewMsg}
           searchTerm={this.state.searchTerm}
         />
       </div>

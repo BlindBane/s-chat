@@ -1,26 +1,37 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Messenger from './components/messenger/Messenger'
 import Landing from './components/Landing'
 import MessageDetails from './components/messenger/MessageDetails'
 
-import messageData from './../data'
-
-const App = () => (
-  <BrowserRouter>
-    <div className='app'>
-      <Switch>
-        <Route exact path='/' component={Landing} />
-        <Route path='/messenger' component={() => <Messenger messages={messageData.messages} />} />
-        <Route
-          path='/message/:id'
-          component={(props) => <MessageDetails {...props}
-            message={messageData.messages.find((msg) => props.match.params.id === msg.msgId)}
-          />}
-        />
-      </Switch>
-    </div>
-  </BrowserRouter>
-)
+class App extends Component {
+  state = {
+    messages: this.props.messages
+  }
+  handleNewMsg = (newMsg) => {
+    const newMsgs = [...this.state.messages.slice(0), newMsg]
+    this.setState({
+      messages: newMsgs
+    })
+  }
+  render () {
+    return (
+      <BrowserRouter>
+        <div className='app'>
+          <Switch>
+            <Route exact path='/' component={Landing} />
+            <Route path='/messenger' component={() => <Messenger messages={this.state.messages} handleNewMsg={this.handleNewMsg} />} />
+            <Route
+              path='/message/:id'
+              component={(props) => <MessageDetails
+                message={this.state.messages.find((msg) => props.match.params.id === msg.msgId)} {...props}
+              />}
+            />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    )
+  }
+}
 
 export default App
