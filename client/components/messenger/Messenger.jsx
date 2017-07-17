@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import MessageBox from './MessageBox'
-import messageData from './../../../data'
 import MessageSearchBar from './MessageSearchBar'
 
 class Messenger extends Component {
   state = {
     searchTerm: '',
-    messages: messageData.messages
+    messages: this.props.messages
   }
   handleSearchTermChange = (e) => {
     this.setState({ searchTerm: e.target.value })

@@ -8,28 +8,6 @@ exports[`Messenger renders correctly 1`] = `
   />
   <MessageBox
     handleNewMsg={[Function]}
-    messages={
-      Array [
-        Object {
-          "channel": "sanFrancisco",
-          "messageText": "Hi, I am bill.",
-          "userId": "1",
-          "username": "Bill",
-        },
-        Object {
-          "channel": "general",
-          "messageText": "Hi, I am Bob.",
-          "userId": "2",
-          "username": "Bob",
-        },
-        Object {
-          "channel": "ASU",
-          "messageText": "Hi, I am Bert.",
-          "userId": "3",
-          "username": "Bert",
-        },
-      ]
-    }
     searchTerm=""
   />
 </div>

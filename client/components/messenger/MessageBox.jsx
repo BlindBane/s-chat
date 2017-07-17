@@ -10,7 +10,7 @@ function MessageBox (props) {
     )
     .map(msg => (
       <Message
-        key={msg.userId}
+        key={msg.msgId}
         username={msg.username}
         messageText={msg.messageText}
         channel={msg.channel}
