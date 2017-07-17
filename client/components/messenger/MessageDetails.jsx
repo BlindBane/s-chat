@@ -5,7 +5,7 @@ const MessageDetails = (props) => {
   const { channel, username, messageText, msgId } = props.message
   return (
     <div>
-      <Header />
+      <Header showMessageBox />
       <p>CHANNEL {channel} </p>
       <p>USER: {username} </p>
       <p>TEXT: {messageText} </p>
