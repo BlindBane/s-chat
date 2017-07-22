@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Messenger from './components/messenger/Messenger'
 import Landing from './components/Landing'
 import SignIn from './components/SignIn'
+import SignUp from './components/SignUp'
 import MessageDetails from './components/messenger/MessageDetails'
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
               />}
             />
             <Route path='/user/signin' component={SignIn} />
+            <Route path='/user/signup' component={SignUp} />
           </Switch>
         </div>
       </BrowserRouter>

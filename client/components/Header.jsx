@@ -27,7 +27,7 @@ const Header = (props) => {
       <Link to='/'>
         <h3>/chat</h3>
       </Link>
-      <Link to='/user/signin'>SignIn</Link> / SignUp
+      <Link to='/user/signin'>SignIn</Link> / <Link to='/user/signup'>SignUp</Link>
       {backBtn}
     </div>
   )

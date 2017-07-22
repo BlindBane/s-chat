@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import Header from './Header'
 
-class SignIn extends Component {
+class SignUp extends Component {
   state = {
     username: '',
-    password: ''
+    password: '',
+    confirmPassword: ''
   }
   handleInputChange = (event) => {
     const value = event.target.value
@@ -36,6 +37,15 @@ class SignIn extends Component {
               onChange={this.handleInputChange} />
           </label>
           <br />
+          <label>
+            Confirm Password:
+            <input
+              name='confirmPassword'
+              type='text'
+              value={this.state.confirmPassword}
+              onChange={this.handleInputChange} />
+          </label>
+          <br />
           <input type='submit' value='Submit' />
         </form>
       </div>
@@ -43,4 +53,4 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn
+export default SignUp
