@@ -3,10 +3,18 @@ import { Link } from 'react-router-dom'
 
 const Header = (props) => {
   let backBtn
-  if (props.showMessageBox) {
+  if (props.backToMessenger) {
     backBtn = (
       <h6>
         <Link to='/messenger'>
+          Back
+        </Link>
+      </h6>
+    )
+  } else if (props.backToLanding) {
+    backBtn = (
+      <h6>
+        <Link to='/'>
           Back
         </Link>
       </h6>
@@ -19,6 +27,7 @@ const Header = (props) => {
       <Link to='/'>
         <h3>/chat</h3>
       </Link>
+      <Link to='/user/signin'>SignIn</Link> / <Link to='/user/signup'>SignUp</Link>
       {backBtn}
     </div>
   )
